@@ -1,6 +1,6 @@
 <template>
-  <div id="dashboard">
-      <h1>Wheelchair Control Dashboard</h1>
+  <div>
+    <h1>Wheelchair Control Dashboard</h1>
     <main>
       <div id="joystick-container">
         <!-- Seu componente de joystick -->
@@ -53,23 +53,9 @@ export default {
 </script>
 
 <style scoped>
-#dashboard {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start; /* Alinhar conteúdo no topo */
-  min-height: 100vh;
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
-}
-
-header {
-  width: 100%;
-  padding: 20px;
-  background-color: #333;
-  color: white;
+h1 {
   text-align: center;
+  margin-top: 20px;
 }
 
 main {
@@ -78,7 +64,7 @@ main {
   align-items: center;
   justify-content: center;
   width: 100%;
-  flex: 1; /* Ocupa o espaço restante do #dashboard */
+  flex: 1; /* Ocupa o espaço restante do main container */
   padding: 20px;
 }
 

@@ -37,6 +37,8 @@ class DatabaseSeeder extends Seeder
         $this->call(ProjectsSeeder::class);
         $this->call(TasksSeeder::class);
         $this->call(TaskUsersSeeder::class);
+        $this->call(PacientSeeder::class);
+        $this->call(WheelchairSeeder::class);
 
         $this->command->info("-----------------------------------------------");
         $this->command->info("END of database seeder");

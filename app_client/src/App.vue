@@ -68,14 +68,14 @@
             <li class="nav-item">
               <router-link class="nav-link" :class="{ active: $route.name === 'Dashboard' }" 
                           :to="{ name: 'Dashboard' }">
-                <i class="bi bi-house"></i>
+                <i class="bi bi-list-stars"></i>
                 Joystick and Controllers
               </router-link>
             </li>
             <li class="nav-item">
                 <router-link class="nav-link" :class="{ active: $route.name === 'CurrentTasks' }" 
                             :to="{ name: 'CurrentTasks' }">
-                  <i class="bi bi-list-stars"></i>
+                  <i class="bi bi-house"></i>
                   Dashboard
                 </router-link>
             </li>

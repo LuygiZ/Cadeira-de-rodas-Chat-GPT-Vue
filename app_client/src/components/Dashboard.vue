@@ -2,6 +2,9 @@
   <div>
     <h1>Wheelchair Control Dashboard</h1>
     <main>
+      <div id="microphone-icon">
+        <i class="fas fa-microphone"></i>
+      </div>
       <div id="joystick-container">
         <!-- Seu componente de joystick -->
         <Joystick ref="joystick" />
@@ -66,6 +69,16 @@ main {
   width: 100%;
   flex: 1; /* Ocupa o espaço restante do main container */
   padding: 20px;
+}
+
+#microphone-icon {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#microphone-icon .fa-microphone {
+  font-size: 2rem; /* Tamanho do ícone */
+  color: #333; /* Cor do ícone */
 }
 
 #joystick-container {

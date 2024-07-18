@@ -1,0 +1,5 @@
+# Ignora a pasta voiceRecognition/dataset
+voiceRecognition/dataset/
+
+# Ignora a pasta voiceRecognition/samples
+voiceRecognition/samples/

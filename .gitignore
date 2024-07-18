@@ -1,5 +1,6 @@
-# Ignora a pasta voiceRecognition/dataset
-voiceRecognition/dataset/
-
 # Ignora a pasta voiceRecognition/samples
 voiceRecognition/samples/
+
+voiceRecognition/samples.zip
+
+voiceRecognition/audio_classification_model.h5

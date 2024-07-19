@@ -17,3 +17,6 @@ logs/
 # Diretórios do Sistema
 .idea/
 .vscode/
+
+#outros
+model/

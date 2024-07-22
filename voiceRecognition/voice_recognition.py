@@ -4,6 +4,7 @@ import pyaudio
 import librosa
 import tensorflow as tf
 from keras.models import load_model
+import requests
 
 # Função para verificar silêncio
 def is_silence(data, threshold):
@@ -40,6 +41,19 @@ def predict_action(audio, sr):
     predicted_action = actions[predicted_index]
     
     return predicted_action
+
+# Função para enviar o comando ao servidor
+def send_command_to_server(action):
+    url = 'http://localhost:3000/direcao'  # URL do servidor
+    data = {'direcao': action}
+    try:
+        response = requests.post(url, json=data)
+        if response.status_code == 200:
+            print(f"Comando '{action}' enviado com sucesso!")
+        else:
+            print(f"Falha ao enviar comando: {response.status_code}")
+    except Exception as e:
+        print(f"Erro ao enviar comando: {e}")
 
 # Configurações de gravação
 chunk = 1024
@@ -80,6 +94,7 @@ try:
                 audio_data = audio_data.astype(np.float32) / 32768  # Normalizar
                 predicted_action = predict_action(audio_data, rate)
                 print(f"Ação prevista: {predicted_action}")
+                send_command_to_server(predicted_action)
                 print("Esperando detecção de som...")
 
 except KeyboardInterrupt:

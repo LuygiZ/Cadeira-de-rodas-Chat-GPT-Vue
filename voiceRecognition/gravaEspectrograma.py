@@ -52,13 +52,13 @@ def grava_audio(filepath, threshold=500, chunk=1024, form=pyaudio.paInt16, chann
 
 def main():
     cria_pastas()
-    acoes = ["frente", "tras", "esquerda", "direita", "mais", "menos", "parar", "rodar"]
+    acoes = ["frente", "tras", "esquerda", "direita", "mais", "menos", "parar"]
 
     while True:
         print("\nMenu:")
         for i, acao in enumerate(acoes):
             print(f"{i}: {acao}")
-        pasta = input("Selecione a pasta (0-7) ou 'sair' para encerrar: ")
+        pasta = input("Selecione a pasta (0-6) ou 'sair' para encerrar: ")
         if pasta.lower() == 'sair':
             break
         if pasta.isdigit() and 0 <= int(pasta) <= 7:
